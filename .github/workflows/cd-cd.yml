@@ -61,7 +61,7 @@ jobs:
           inlineScript:
             az group create --name ${{ env.AZURE_RG }} --location ${{ env.AZURE_LOCATION }}
   Dev-Job:
-    runs-on: ubuntu-latst
+    runs-on: ubuntu-latest
     environment: development
     needs: [RG-Job]
     steps:
@@ -95,7 +95,7 @@ jobs:
           # app-name: ${{ env.AZURE-_WEBAPP_NAME }}
           package: ${{ runner.temp }}/publish
   Prod-Job:
-    runs-on: ubuntu-latst
+    runs-on: ubuntu-latest
     environment: production
     needs: [Dev-Job]
     env:
