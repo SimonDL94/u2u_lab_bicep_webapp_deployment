@@ -47,5 +47,14 @@ jobs:
         retention-days: 30
   RG-Job:
     runs-on: Login to Azure
-    
-    
+    needs: [Build-Job]
+    steps:
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Create Resource Group
+        uses: Azure/cli@v1
+        with:
+          inlineScript:
+            az group create --name ${{ nv.AZURE_RG }} --location ${{ env.AZURE_LOCATION }}
