@@ -48,6 +48,7 @@ jobs:
   RG-Job:
     runs-on: Login to Azure
     needs: [Build-Job]
+    # test
     steps:
       - name: Login to Azure
         uses: azure/login@v1
