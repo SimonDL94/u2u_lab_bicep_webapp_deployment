@@ -46,7 +46,7 @@ jobs:
         path: ./templates/*
         retention-days: 30
   RG-Job:
-    runs-on: Login to Azure
+    runs-on: ubuntu-latest
     needs: [Build-Job]
     # test
     steps:
