@@ -12,7 +12,7 @@ on:
 env:
       AZURE_RG: github-actions-staged
       AZURE_SUBSCRIPTION: <<REPLACE>>
-      AZURE-LOCATION: eastUS
+      AZURE_LOCATION: eastUS
 jobs:
   Build-Job:
     runs-on: ubuntu-latest
