@@ -84,7 +84,7 @@ jobs:
           template: ${{ runner.temp }}/templates/webapp.bicep
           parameters: location=${{ ENV.AZURE_LOCATION }} appName=${{env.AZURE_WEBAPP_NAME}}
       - name: Download Publish
-        uses: actions/donwload-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: publish_artifact
           path: ${{ runner.temp }}/publish
@@ -120,7 +120,7 @@ jobs:
           template: ${{ runner.temp }}/templates/webapp.bicep
           parameters: location=${{ ENV.AZURE_LOCATION }} appName=${{env.AZURE_WEBAPP_NAME}}
       - name: Download Publish
-        uses: actions/donwload-artifact@v3
+        uses: actions/download-artifact@v3
         with:
           name: publish_artifact
           path: ${{ runner.temp }}/publish
