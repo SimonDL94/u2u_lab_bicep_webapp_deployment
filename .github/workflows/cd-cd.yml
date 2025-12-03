@@ -45,3 +45,7 @@ jobs:
         name: templates_artifact
         path: ./templates/*
         retention-days: 30
+  RG-Job:
+    runs-on: Login to Azure
+    
+    
